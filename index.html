@@ -41,6 +41,35 @@
   box-shadow: 0 0 15px #05aa0d;
   transform: scale(1.05);
 }
+#hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* Ensures the video covers the entire section */
+}
+
+#cnt {
+  z-index: 1;
+  position: relative;
+  color: white;
+}
+
+.btn-get-started {
+  z-index: 2;
+}
 
 </style>
 
@@ -68,25 +97,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto">Quem somos</a></li>
-          <li class="dropdown"><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#services">Serviços 1</a></li>
-              <li class="dropdown"><a href="#services"><span>Serviços</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#services">Serviços 1</a></li>
-                  <li><a href="#services">Serviços 2</a></li>
-                  <li><a href="#services">Serviços 3</a></li>
-                  <li><a href="#services">Serviços 4</a></li>
-                  <li><a href="#services">Serviços 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#services">Serviços 2</a></li>
-              <li><a href="#services">Serviços 3</a></li>
-              <li><a href="#services">Serviços 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#services">Particular</a></li>
-          <li><a class="nav-link scrollto " >Empresa</a></li>
+          <li ><a href="#services"><span>Objectivos</span> </a></li>
+          <li><a href="#servico">Serviços</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -111,16 +123,21 @@
       </section></div>
   
   </div> -->
- <section id="hero" class="d-flex flex-column justify-content-center align-items-center" >
-    <div class="container" data-aos="fade-in" >
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <video autoplay muted loop playsinline id="background-video">
+      <source src="assets/PLASTEK SITE.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div id="cnt" class="container text-center" data-aos="fade-in">
       <h1>PLAS-TEK</h1>
       <h2>Um inovativo e confiável parceiro Em embalagens plásticas</h2>
-      <div class="d-flex align-items-center" >
+      <div class="d-flex align-items-center">
         <i class="bx bx-arrow-to-bottom get-started-icon" style="color:#fff"></i>
-        <a href="CATALOGOPLAS-TEK.pdf" target="_blank" class="btn-get-started scrollto" >Catalougue</a>
+        <a href="CATALOGOPLAS-TEK.pdf" target="_blank" class="btn-get-started scrollto">Catálogo</a>
       </div>
     </div>
-  </section> 
+  </section>
+  
 
   <main id="main">
 
@@ -208,7 +225,7 @@
       </div>
     </section>
     <!-- ======= About Section ======= -->
-    <section class="about ">
+    <section class="about " id='servico'>
       <div class="container">
 
         <div class="row">
@@ -288,8 +305,8 @@
 
 
     
-    <section class="services"  style=" background-image: url('assets/img/herobg.png'); 
-    background-color: #cccccc;
+    <section class="services"  style=" 
+    background-color: #003c94;
     height: 500px; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -300,8 +317,8 @@
 
        <div class="row">
         <div class="col-12 text-center" style="top:50%">
-          <img src="assets/img/logohand.png" class="img-fluid" style="height: 300px;">
-          <h1  style="color:white">Seguros que garantem mais tranquilidade e segurança para você e seu negócio.</h1>
+          <img src="assets/img/floteklogoblue.png" class="img-fluid" style="height: 300px;">
+          <h1  style="color:white">Produtos que garantem mais tranquilidade e segurança para você e seu negócio.</h1>
         </div>
 
        </div>
@@ -350,7 +367,7 @@
               <i class="bx bx-map"></i>
               <h3>Nosso Endereço</h3>
               <p>
-                Edifício Beira - Zona Financeira do Patriota (ZFP)
+                km 25, Estrada de Catete, PIV viana
               </p>
             </div>
           </div>
@@ -360,7 +377,7 @@
               <i class="bx bx-envelope"></i>
               <h3>Email</h3>
               <p>
-              info@confiancaseguros.co.a<br>
+              vendas@plastek.co.a<br>
               </p>
             </div>
           </div>
@@ -369,7 +386,7 @@
               <i class="bx bx-phone-call"></i>
               <h3>Ligue</h3>
               <p>
-             (+244) 937 948 484
+             (+244) 922 738 302 / 947 941 599
               </p>
             </div>
           </div>
@@ -418,12 +435,11 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <img src="assets/img/logofundo.png" class="img-fluid mb-4"  />
             <p>
-              Edifício Beira - Zona Financeira do Patriota (ZFP) <br>
-              Estrada do Lar do Patriota<br>
+              km 25, Estrada de Catete, PIV viana <br>
               Luanda - Angola<br><br>
-              <strong>Phone:</strong> (+244) 937 948 484
+              <strong>Phone:</strong> (+244)922 738 302 / 947 941 599
               <br>
-              <strong>Email:</strong> info@confiancaseguros.co.a<br>
+              <strong>Email:</strong> info@plastek.co.a<br>
             </p>
           </div>
 
@@ -461,14 +477,14 @@
 
       <div class="me-lg-auto text-center text-lg-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Confiança Seguros</span></strong>. Todos direitos reservado.
+          &copy; Copyright <strong><span>PLAS-TEK</span></strong>. Todos direitos reservado.
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexor-free-multipurpose-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">G-SMART SOLUTIONS</a>
+          Designed by <a href="https://ragy.vercel.app/">ragy</a>
         </div>
       </div>
       <div class="social-links text-center text-lg-right pt-3 pt-lg-0" style="color:#fff">
