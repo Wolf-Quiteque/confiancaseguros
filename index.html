@@ -99,6 +99,8 @@
           <li><a class="nav-link scrollto">Quem somos</a></li>
           <li ><a href="#services"><span>Objectivos</span> </a></li>
           <li><a href="#servico">Serviços</a></li>
+          <li><a href="#Notícias">Notícias</a></li>
+
           <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -163,21 +165,21 @@
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                  <div class="icon-box mt-4 mt-xl-0">
+                  <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Embalagens PET', getEmbalagemPETContent())">
                     <i class="bx bx-package" style="color:#05aa0d"></i>
                     <h4>Embalagens PET</h4>
                     <p style="text-align: left;">Nossas pré-formas de PET são ideais para garantir segurança e qualidade em alimentos e bebidas.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                  <div class="icon-box mt-4 mt-xl-0">
+                  <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Tampas de PEAD', getTampasPEADContent())">
                     <i class="bx bx-capsule" style="color:#05aa0d"></i>
                     <h4>Tampas de PEAD</h4>
                     <p style="text-align: left;">Tampas de alta durabilidade para setores farmacêuticos e cuidados pessoais.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                  <div class="icon-box mt-4 mt-xl-0">
+                  <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Embalagens Flexíveis', getEmbalagensFlexiveisContent())">
                     <i class="bx bx-recycle" style="color:#05aa0d"></i>
                     <h4>Embalagens Flexíveis</h4>
                     <p style="text-align: left;">Soluções de embalagens sustentáveis que aumentam a proteção e reduzem o impacto ambiental.</p>
@@ -187,10 +189,26 @@
             </div>
           </div>
           
+    
+          
+          
         </div>
 
       </div>
     </section><!-- End Why Us Section -->
+
+
+
+<div id="blue-overlay"></div>
+<div id="green-overlay">
+  <div class="content">
+    <h4 id="overlay-title"></h4>
+    <div id="overlay-description"></div> <!-- Now this is a div for dynamic HTML -->
+    <button class="button-close " onclick="closeOverlay()">Fechar</button>
+  </div>
+</div>
+
+
 
     <section id="services" class="services" style="margin-top:80px">
       <div class="container">
@@ -586,6 +604,81 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function getEmbalagemPETContent() {
+  return `
+    <div class="type-title">Garrafas PET</div>
+    <img src="https://picsum.photos/200/300" alt="Garrafas PET">
+    <p>As garrafas PET são amplamente utilizadas para armazenar bebidas, <br>como água mineral, <br>refrigerantes e sucos. São leves, resistentes e recicláveis.</p>
+
+    <div class="type-title">Frascos PET</div>
+    <img src="https://picsum.photos/200/300" alt="Frascos PET">
+    <p>Frascos de PET são ideais para armazenar cosméticos, produtos de limpeza e alimentos. <br>Garantem vedação segura e longa durabilidade.</p>
+
+    <div class="type-title">Pré-formas PET</div>
+    <img src="https://picsum.photos/200/300" alt="Pré-formas PET">
+    <p>Pré-formas de PET são utilizadas para a fabricação de garrafas e frascos, oferecendo <br> flexibilidade de design e personalização.</p>
+  `;
+}
+
+function getTampasPEADContent() {
+  return `
+    <div class="type-title">Tampas Flip-Top</div>
+    <img src="https://picsum.photos/200/300" alt="Tampas Flip-Top">
+    <p>Tampas Flip-Top são ideais para produtos farmacêuticos e cuidados pessoais, <br>oferecendo fácil abertura e fechamento com segurança.</p>
+
+    <div class="type-title">Tampas Rosqueáveis</div>
+    <img src="https://picsum.photos/200/300" alt="Tampas Rosqueáveis">
+    <p>Tampas rosqueáveis de PEAD garantem vedação confiável para uma variedade de <br> produtos líquidos e sólidos, sendo resistentes e duráveis.</p>
+
+    <div class="type-title">Tampas dosadoras</div>
+    <img src="https://picsum.photos/200/300" alt="Tampas dosadoras">
+    <p>Tampas dosadoras são ideais para produtos que exigem controle de dosagem, <br> como  produtos farmacêuticos e cosméticos.</p>
+  `;
+}
+
+function getEmbalagensFlexiveisContent() {
+  return `
+    <div class="type-title">Sacos Stand-Up</div>
+    <img src="https://picsum.photos/200/300" alt="Sacos Stand-Up">
+    <p>Sacos stand-up são versáteis, usados para alimentos, cosméticos e produtos de limpeza,<br>com fechamento hermético para garantir frescor.</p>
+
+    <div class="type-title">Filmes Plásticos</div>
+    <img src="https://picsum.photos/200/300" alt="Filmes Plásticos">
+    <p>Filmes plásticos são ideais para embalagens flexíveis, protegendo produtos enquanto <br> reduzem o uso de material.</p>
+
+    <div class="type-title">Sacos de Vácuo</div>
+    <img src="https://picsum.photos/200/300" alt="Sacos de Vácuo">
+    <p>Sacos de vácuo são perfeitos para conservar alimentos por mais tempo, removendo o ar do <br> interior da embalagem.</p>
+  `;
+}
+
+ function showOverlay(title, content) {
+  const overlayTitle = document.getElementById('overlay-title');
+  const overlayDescription = document.getElementById('overlay-description');
+
+  overlayTitle.innerText = title;
+  overlayDescription.innerHTML = content;
+  // Trigger the blue overlay animation
+  document.getElementById('blue-overlay').classList.add('active');
+  
+  // After the blue overlay finishes (1s delay), trigger the green overlay
+  setTimeout(function() {
+    document.getElementById('green-overlay').classList.add('active');
+  }, 1000);
+}
+
+function closeOverlay() {
+  // Remove active classes to hide overlays
+   document.getElementById('green-overlay').classList.remove('active');
+  setTimeout(function() {
+    document.getElementById('blue-overlay').classList.remove('active');
+  }, 300);
+
+}
+
+  </script>
 
 </body>
 
