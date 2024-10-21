@@ -134,7 +134,7 @@
       <h1>PLAS-TEK</h1>
       <h2>Um inovativo e confiável parceiro Em embalagens plásticas</h2>
       <div class="d-flex align-items-center">
-        <i class="bx bx-arrow-to-bottom get-started-icon" style="color:#fff"></i>
+        <i class="bx bx-arrow-to-bottom get-started-icon"></i>
         <a href="CATALOGOPLAS-TEK.pdf" target="_blank" class="btn-get-started scrollto">Catálogo</a>
       </div>
     </div>
@@ -157,7 +157,7 @@
               </p>
               
               <div class="text-center">
-                <a href="#" class="more-btn" style="color:#fff">Saber mais <i class="bx bx-chevron-right"></i></a>
+                <a href="#" class="more-btn" >Saber mais <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -165,24 +165,52 @@
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                  <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Embalagens PET', getEmbalagemPETContent())">
-                    <i class="bx bx-package" style="color:#05aa0d"></i>
-                    <h4>Embalagens PET</h4>
+                  <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Pré-formas de PET', getPrEformasPETContent())">
+                    <i class="bx bx-package"></i>
+                    <h4>Pré-formas PET</h4>
                     <p style="text-align: left;">Nossas pré-formas de PET são ideais para garantir segurança e qualidade em alimentos e bebidas.</p>
+                    <p class="text-center mt-4">
+
+                      
+                      <div class="text-center">
+                        <div class="read-more">
+                          <a href="#">ver mais </a>
+                        </div>
+                      </div>
+                    </p>
                   </div>
+         
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                   <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Tampas de PEAD', getTampasPEADContent())">
-                    <i class="bx bx-capsule" style="color:#05aa0d"></i>
+                    <i class="bx bx-capsule" ></i>
                     <h4>Tampas de PEAD</h4>
                     <p style="text-align: left;">Tampas de alta durabilidade para setores farmacêuticos e cuidados pessoais.</p>
+                    <p class="text-center mt-5">
+
+                      
+                      <div class="text-center">
+                        <div class="read-more">
+                          <a href="#">ver mais </a>
+                        </div>
+                      </div>
+                    </p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                   <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Embalagens Flexíveis', getEmbalagensFlexiveisContent())">
-                    <i class="bx bx-recycle" style="color:#05aa0d"></i>
+                    <i class="bx bx-recycle" ></i>
                     <h4>Embalagens Flexíveis</h4>
                     <p style="text-align: left;">Soluções de embalagens sustentáveis que aumentam a proteção e reduzem o impacto ambiental.</p>
+                    <p class="text-center mt-2">
+
+                      
+                      <div class="text-center">
+                        <div class="read-more">
+                          <a href="#">ver mais </a>
+                        </div>
+                      </div>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -199,12 +227,13 @@
 
 
 
-<div id="blue-overlay"></div>
+<div id="blue-overlay" onclick="closeOverlay()"></div>
 <div id="green-overlay">
+
   <div class="content">
-    <h4 id="overlay-title"></h4>
-    <div id="overlay-description"></div> <!-- Now this is a div for dynamic HTML -->
-    <button class="button-close " onclick="closeOverlay()">Fechar</button>
+    <button class="btn btn-light mb-3" onclick="closeOverlay()"> <i class="bx bx-arrow-to-left" > </i>  sair </button>
+    <h4 id="overlay-title"> </h4>
+    <div id="overlay-description"></div>
   </div>
 </div>
 
@@ -217,9 +246,9 @@
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-eye"></i></div>
-              <h4 class="title"><a href="">
-                Nossa Visão </a></h4>
+              <div class="icon"><i class="bi bi-eye" style="font-size: 30px;"></i></div>
+              <h4 class="title">
+                Nossa Visão </h4>
               <p class="description">A PLAS-TEK será o fabricante e fornecedor 
                 preferencial de soluções de tubos e embalagens.</p>
             </div>
@@ -227,14 +256,14 @@
           <div class="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-flag"></i></div>
-              <h4 class="title"><a href="">Nossa Missão </a></h4>
+              <h4 class="title">Nossa Missão </h4>
               <p class="description">Oferecemos soluções baseadas em tecnologia e qualidade para atender ás necessidades dos clientes e preços competitivos.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-stars"></i></div>
-              <h4 class="title"><a href="">Nossos Valores</a></h4>
+              <h4 class="title">Nossos Valores</h4>
               <p class="description">Paixão , Respeito, Inovação, Profissionalismo, Trabalho em Equipa.</p>
             </div>
           </div>
@@ -250,70 +279,25 @@
        
 
           <div class="col-md-12  icon-boxes d-flex flex-column align-items-stretch text-center py-5 px-lg-5">
-            <h2 data-aos="fade-up">Um Inovativo e Confiável <br> Parceiro Em Embalagens Plásticas</h2>
+            <h2 data-aos="fade-up">Indústrias qeu Servimos</h2>
             <p data-aos="fade-up">Ideal para uma vasta gama de aplicaçõs, incluindo alimentos, bebidas e produtos industrials. procura e adaptablidade. Concebido para satisfazer as rigorasas exigência, garantindo a intergridade do produto durante o transporte. Incorpora 
               mmateriais avançados para reduzir a pegada de carbono e mlhorar a reciclablidade</p>
           </div>
 
    
           <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-           <div class="card custom-product">
-            <div class="card-body">  <img class="img-fluid" style="height: 250px;" src="assets/img/produtos/MAL01.jpg" >
-              <h5 class="title mt-3">IMPRIMA SUA MARCA NA PERFEIÇÃO </h5>
-          </div>
-           </div>
+<img class="img-fluid" style="height: 175px;" src="assets/img/produtos/leite.png" >
+          
             
           </div>
-
-
           <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-            <div class="card custom-product">
-             <div class="card-body">  <img class="img-fluid" style="height: 250px;" src="assets/img/produtos/filmss.webp" >
-               <h5 class="title mt-3">OFERECEMOS RESITÊMCIA E FLEXIBLIDADE </h5>
-           </div>
+            <img class="img-fluid" style="height: 187px;" src="assets/img/produtos/molhos.png" >
             </div>
-             
-           </div>
 
-
-           <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-            <div class="card custom-product">
-             <div class="card-body">  <img class="img-fluid" style="height: 250px;" src="assets/img/produtos/films.jpeg" >
-               <h5 class="title mt-3">PROTEGE, EXIBE COM FACILIDADE</h5>
-           </div>
-            </div>
-             
-           </div>
-
-        
-
-           <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-            <div class="card custom-product">
-             <div class="card-body">  <img class="img-fluid" style="height: 250px;" src="assets/img/produtos/frescos.jpeg" >
-               <h5 class="title mt-3">PRESERVAMOS A FRESCURA, PROLONGADO O SABOR. </h5>
-           </div>
-            </div>
-             
-           </div>
            
-           <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-            <div class="card custom-product">
-             <div class="card-body">  <img class="img-fluid" style="height: 250px;" src="assets/img/produtos/pet.jpeg" >
-               <h5 class="title mt-3">OFERECEMOS CLAREZA E  RESISTENCIA. </h5>
-           </div>
-            </div>
-             
-           </div>
-          
 
-           <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-            <div class="card custom-product">
-             <div class="card-body">  <img class="img-fluid" style="height: 250px;" src="assets/img/produtos/bottles.jpg" >
-               <h5 class="title mt-3">GARANTIMOS SEGURANÇA PARA ÁGUA, OLEO E REFRIGIRANTE. </h5>
-           </div>
-            </div>
-             
-           </div>
+
+
            <div class="col-md-12 text-center mt-5">
               <a class="btn btn-primary" style="background-color: #05aa0d;" href="CATALOGOPLAS-TEK.pdf" target="_blank"  class="bx bx-arrow-to-botttom">Conheça Mais</a>
            </div>
@@ -510,7 +494,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit" style="color:#fff">Enviar Mensagem</button></div>
+              <div class="text-center"><button type="submit" >Enviar Mensagem</button></div>
             </form>
           </div>
 
@@ -560,7 +544,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Junte-se à nossa newsletter</h4>
           <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Se inscrever" style="color:#fff">
+              <input type="email" name="email"><input type="submit" value="Se inscrever">
             </form>
           </div>
 
@@ -606,36 +590,389 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    function getEmbalagemPETContent() {
+    function getPrEformasPETContent() {
   return `
-    <div class="type-title">Garrafas PET</div>
-    <img src="https://picsum.photos/200/300" alt="Garrafas PET">
-    <p>As garrafas PET são amplamente utilizadas para armazenar bebidas, <br>como água mineral, <br>refrigerantes e sucos. São leves, resistentes e recicláveis.</p>
 
-    <div class="type-title">Frascos PET</div>
-    <img src="https://picsum.photos/200/300" alt="Frascos PET">
-    <p>Frascos de PET são ideais para armazenar cosméticos, produtos de limpeza e alimentos. <br>Garantem vedação segura e longa durabilidade.</p>
 
-    <div class="type-title">Pré-formas PET</div>
-    <img src="https://picsum.photos/200/300" alt="Pré-formas PET">
-    <p>Pré-formas de PET são utilizadas para a fabricação de garrafas e frascos, oferecendo <br> flexibilidade de design e personalização.</p>
-  `;
+   <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/preformas1.png" class="img-fluid"  />
+       <div class="card-body"> 
+         <table class="table table-light striped table-sm">
+        <thead>
+          <tr>
+            <th>Tamanho Gargolo  </th>
+            <th>Tipo</th>
+            <th>Capacidade</th>
+            <th>Objetivo</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td>28 mm 1881 </td>
+            <td>18.4</td>
+            <td>300 ml, 500 ml</td>
+            <td>Óleo, água, detergente, CSD</td>
+
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div>
+
+
+
+      <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/preforma2.png" class="img-fluid"  />
+       <div class="card-body"> 
+         <table class="table table-light striped table-sm">
+        <thead>
+          <tr>
+            <th>Tamanho Gargolo  </th>
+            <th>Tipo</th>
+            <th>Capacidade (ml)</th>
+            <th>Objetivo</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gargalo Curto 29/25 </td>
+            <td>12.5</td>
+            <td>300 ml</td>
+            <td>Óleo, água</td>
+          </tr>
+           <tr>
+            <td>Gargalo Curto 29/25 </td>
+            <td>26.8</td>
+            <td>1000 ml</td>
+            <td>Óleo, água</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div>
+
+
+
+    <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/preforma3.png" class="img-fluid"  />
+       <div class="card-body"> 
+         <table class="table table-light striped table-sm">
+        <thead>
+          <tr>
+            <th>Tamanho Gargolo  </th>
+            <th>Tipo</th>
+            <th>Capacidade (ml)</th>
+            <th>Objetivo</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td>28 mm PC0 1810 </td>
+            <td>18.5</td>
+            <td>300 ml, 500 ml</td>
+            <td>Óleo, água</td>
+          </tr>
+           <tr>
+            <td>28 mm PC0 1810 </td>
+            <td>33</td>
+            <td>1000 ml, 1500 ml</td>
+            <td>Óleo, água</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div>
+
+
+
+
+
+    <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/preforma4.png" class="img-fluid"  />
+       <div class="card-body"> 
+         <table class="table table-light striped table-sm">
+        <thead>
+          <tr>
+            <th>Tamanho Gargolo  </th>
+            <th>Tipo</th>
+            <th>Capacidade (ml)</th>
+            <th>Objetivo</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td>30 mm TST</td>
+            <td>13</td>
+            <td>300 ml</td>
+            <td>Líquidos não gaseficados</td>
+          </tr>
+           <tr>
+            <td>30 mm TST </td>
+            <td>16</td>
+            <td>300 ml, 500 ml</td>
+            <td>Líquidos não gaseficados</td>
+          </tr>
+
+             <tr>
+            <td>30 mm TST </td>
+            <td>33</td>
+            <td>1000 ml, 500 ml</td>
+            <td>Líquidos não gaseficados</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div>
+
+
+
+
+
+    <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/preforma5.png" class="img-fluid"  />
+       <div class="card-body"> 
+         <table class="table table-light striped table-sm">
+        <thead>
+          <tr>
+            <th>Tamanho Gargolo  </th>
+            <th>Tipo</th>
+            <th>Capacidade (ml)</th>
+            <th>Objetivo</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td>38 mm </td>
+            <td>27</td>
+            <td>500 ml</td>
+            <td>Óleo, água, líquidos não gaseficados</td>
+          </tr>
+           <tr>
+            <td>38 mm</td>
+            <td>80</td>
+            <td>5000 ml</td>
+            <td>Óleo, água, líquidos não gaseficados</td>
+
+          </tr>
+
+             <tr>
+            <td>38 mm</td>
+            <td>72</td>
+            <td>5000 ml</td>
+            <td>Líquidos não gaseficados</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div>
+
+
+
+
+
+
+      <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/preforma5.png" class="img-fluid"  />
+       <div class="card-body"> 
+         <table class="table table-light striped table-sm">
+        <thead>
+          <tr>
+            <th>Tamanho Gargolo  </th>
+            <th>Tipo</th>
+            <th>Capacidade</th>
+            <th>Objetivo</th>
+          </tr> 
+        </thead>
+        <tbody>
+          <tr>
+            <td>48 mm</td>
+            <td>92</td>
+            <td>5000 ml, 7000 ml</td>
+            <td>Óleo, água</td>
+          </tr>
+        </tbody>
+      </table>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div>
+`;
 }
 
 function getTampasPEADContent() {
   return `
-    <div class="type-title">Tampas Flip-Top</div>
-    <img src="https://picsum.photos/200/300" alt="Tampas Flip-Top">
-    <p>Tampas Flip-Top são ideais para produtos farmacêuticos e cuidados pessoais, <br>oferecendo fácil abertura e fechamento com segurança.</p>
+   <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/capsula2.png" class="img-fluid"  />
+       <div class="card-body"> 
+        
+        <h4 class="text-black">1881 CSC Cápsulas-5</h4>
+        <p class="text-black" style=" text-align:justify">
+Projetado espedificamente para 
+atender aos requisitos rigorosos das 
+grandes marcas CSD, essas cápsulas, no
+entanto, são igualmente adequadas para água
+com ou sem gás. Ideal para quem procura uma peça
+única 1881 com o benefício adicional de relevo
+personalizável no painel superior. 
+É um fecho abrangente que certifica que a 
+cápsula feche completamente a garrafa.</p>
 
-    <div class="type-title">Tampas Rosqueáveis</div>
-    <img src="https://picsum.photos/200/300" alt="Tampas Rosqueáveis">
-    <p>Tampas rosqueáveis de PEAD garantem vedação confiável para uma variedade de <br> produtos líquidos e sólidos, sendo resistentes e duráveis.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div> 
+   
+   
+   
+   <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/capsula1.png" class="img-fluid"  />
+       <div class="card-body"> 
+        
+        <h4 class="text-black" >Cápsulas S29w15</h4>
+        <p class="text-black" style=" text-align:justify">
+Produzimos cápsulas de plástico de alta
+qualidade para aplicações de enchimento a quente e 
+não-carbonatados em cores.
+Usamos equipamento de alta qualidade
+do sistema de molde e compressão da Sacmi.
+As nossas cápsulas são produzidas e operadas
+em uma sala ambiental limpa e fechada.</p>
 
-    <div class="type-title">Tampas dosadoras</div>
-    <img src="https://picsum.photos/200/300" alt="Tampas dosadoras">
-    <p>Tampas dosadoras são ideais para produtos que exigem controle de dosagem, <br> como  produtos farmacêuticos e cosméticos.</p>
-  `;
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div> 
+   
+   
+   
+   
+   
+   
+      <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/capsula3.png" class="img-fluid"  />
+       <div class="card-body"> 
+        
+        <h4 class="text-black" >Cápsulas S30-30</h4>
+        <p class="text-black" style=" text-align:justify">
+Produzimos cápsulas de plástico de alta
+qualidade para aplicações de enchimento a quente e 
+não-carbonatados em cores.
+Usamos equipamento de alta qualidade
+do sistema de molde e compressão da Sacmi.
+As nossas cápsulas são produzidas e operadas
+em uma sala ambiental limpa e fechada.</p>
+
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div> 
+   
+   
+
+
+
+         <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/capsula4.png" class="img-fluid"  />
+       <div class="card-body"> 
+        
+        <h4 class="text-black" >Cápsulas 38 mm</h4>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div> 
+   
+   
+
+   
+         <div class="row mb-5" >  
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="card" >
+       <img src="assets/img/capsula5.png" class="img-fluid"  />
+       <div class="card-body"> 
+        
+        <h4 class="text-black" >Pegas para Garrafas de Gargalo 38 & 48 mm</h4>
+        </div>
+      </div>
+      </div>
+    </div>
+<div class="col-md-3"></div>
+   </div> 
+   
+   
+    
+
+   `;
+   
+   
+   
+   
+  
+
+
+
+
+   
 }
 
 function getEmbalagensFlexiveisContent() {
@@ -666,7 +1003,7 @@ function getEmbalagensFlexiveisContent() {
   // After the blue overlay finishes (1s delay), trigger the green overlay
   setTimeout(function() {
     document.getElementById('green-overlay').classList.add('active');
-  }, 1000);
+  }, 800);
 }
 
 function closeOverlay() {

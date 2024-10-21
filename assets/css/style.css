@@ -69,7 +69,7 @@ h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #05aa0d;
+  background: #0253a4;
   font-size: 14px;
   padding: 0;
   color: rgba(255, 255, 255, 0.8);
@@ -78,7 +78,7 @@ h6 {
 
 #topbar .contact-info i {
   font-style: normal;
-  color: #0253a4;
+  color: #fff;
 }
 
 #topbar .contact-info i a,
@@ -431,9 +431,9 @@ h6 {
 
 #hero .get-started-icon {
   font-size: 24px;
-  background: #0253a4;
+  background: #fff;
   padding: 14px;
-  color: #fff;
+  color: #05aa0d;
   border-radius: 50px;
   position: relative;
   z-index: 5;
@@ -450,14 +450,15 @@ h6 {
   margin-left: -10px;
   padding: 8px 26px 8px 26px;
   color: #fff;
-  background: #05aa0d;
+  background: #0253a4;
   border-radius: 0 50px 50px 0;
   position: relative;
   z-index: 4;
 }
 
 #hero .btn-get-started:hover {
-  background: #0253a4;
+  background: #fff;
+  color:#05aa0d;
 }
 
 @media (min-width: 1024px) {
@@ -605,6 +606,9 @@ section {
   background: #fff;
 }
 
+
+
+
 .why-us .icon-boxes .icon-box {
   text-align: center;
   border-radius: 10px;
@@ -626,6 +630,16 @@ section {
   color: #fff;
 }
 
+.why-us .icon-boxes .icon-box:hover i {
+  color: #fff;
+}
+
+
+.why-us .icon-boxes .icon-box:hover .read-more a 
+ {
+  color: #0253a4;
+  background-color: #fff;
+}
 
 /* Overlay styles */
 #blue-overlay, #green-overlay {
@@ -639,13 +653,15 @@ section {
 }
 
 #blue-overlay {
-  background-color: rgba(2, 83, 164, 0.8); /* Blue with opacity */
+  background-color: rgba(5, 170, 13, 0.9); /* Blue with opacity */
   z-index: 9998;
+  cursor: pointer;
 }
 
 #green-overlay {
-  background-color: rgba(5, 170, 13, 0.9); /* Green with opacity */
+  background-color: rgba(2, 83, 164, 0.8); /* Green with opacity */
   z-index: 9999;
+
 }
 
 #green-overlay .content {
@@ -656,7 +672,7 @@ section {
   text-align: center;
   padding: 20px;
   overflow-y: auto; /* Allows scrolling */
-  max-height: 80%; /* Ensures the overlay doesn't overflow the screen */
+  max-height: 95%; /* Ensures the overlay doesn't overflow the screen */
 }
 
 button.button-close {
@@ -677,6 +693,7 @@ button.button-close {
 #green-overlay.active {
   left: -10%; /* Covers 90% of the screen */
 }
+
 
 /* Close button hover effect */
 button.button-close:hover {
@@ -800,6 +817,8 @@ button.button-close:hover {
   color: #0253a4;
   font-size: 32px;
 }
+
+
 
 .about .icon-box:hover .icon {
   background: #0253a4;
@@ -985,7 +1004,7 @@ button.button-close:hover {
   left: calc(50% - 36px);
   transition: 0.2s;
   border-radius: 50%;
-  border: 6px solid #05aa0d;
+  border: 6px solid #0253a4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -993,11 +1012,11 @@ button.button-close:hover {
   text-align: center;
   width: 72px;
   height: 72px;
-  background: #0253a4;
+  background: #fff;
 }
 
 .services .icon i {
-  color: #05aa0d;
+  color: #0253a4;
   font-size: 24px;
   line-height: 0;
 }
@@ -1013,13 +1032,26 @@ button.button-close:hover {
   color: #343a40;
 }
 
+.services .icon-box:hover {
+  background: #0253a4;
+  color: #fff;
+  transition: 0.5s;
+  transform: scale(1.05);
+
+  
+}
 .services .icon-box:hover .icon {
-  background: #05aa0d;
-  border: 2px solid #0253a4;
+  background: #0253a4;
+  border: 2px solid #fff;
+}
+
+
+.services .icon-box:hover h4.title a {
+color:#fff  
 }
 
 .services .icon-box:hover .icon i {
-  color: #0253a4;
+  color: #fff;
 }
 
 .services .icon-box:hover .title a {
@@ -1748,7 +1780,8 @@ button.button-close:hover {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #ff7e54;
+  background: #fff;
+  color:#05aa0d;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1848,17 +1881,38 @@ button.button-close:hover {
 
 .blog .entry .entry-content .read-more a {
   display: inline-block;
-  background: #0253a4;
-  color: #fff;
+  background: #fff;
+  color: #0253a4;
   padding: 6px 20px;
   transition: 0.3s;
   font-size: 14px;
   border-radius: 4px;
 }
 
-.blog .entry .entry-content .read-more a:hover {
-  background: #ff6b3b;
+
+ .read-more a {
+  display: inline-block;
+  background: #0253a4;
+  color: #fff;
+  padding: 6px 20px;
+  transition: 0.3s;
+  font-size: 14px;
+  border-radius: 50px;
 }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 
 .blog .entry .entry-content h3 {
   font-size: 22px;
@@ -2405,7 +2459,8 @@ button.button-close:hover {
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #ed3b00;
+  background: #fff;
+  color: #05aa0d;
 }
 
 #footer .credits {
