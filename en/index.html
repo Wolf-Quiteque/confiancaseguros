@@ -193,7 +193,7 @@
               <div class="row">
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('PET Preforms', getPrEformasPETContent())">
-                    <i class="bx bx-package"></i>
+                  
                     <h4>PET Preforms</h4>
                     <p style="text-align: left;">Our PET preforms are ideal for ensuring safety and quality in food and beverages.</p>
                     <p class="text-center mt-4">
@@ -210,7 +210,7 @@
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                   <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('HDPE Caps', getTampasPEADContent())">
-                    <i class="bx bx-capsule" ></i>
+                 
                     <h4>HDPE Caps</h4>
                     <p style="text-align: justify;">High-durability caps for the pharmaceutical and personal care sectors.</p>
                     <p class="text-center mt-5">
@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                   <div class="icon-box mt-4 mt-xl-0" onclick="showOverlay('Flexible Packaging', getEmbalagensFlexiveisContent())">
-                    <i class="bx bx-recycle" ></i>
+                
                     <h4>Flexible Packaging</h4>
                     <p style="text-align: justify;">Sustainable packaging solutions that increase protection and reduce environmental impact.</p>
                     <p class="text-center mt-2">
@@ -272,7 +272,6 @@
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-eye" style="font-size: 30px;"></i></div>
               <h4 class="title">
                 Our Vision </h4>
               <p class="description">PLAS-TEK will be the preferred manufacturer and supplier of tube and packaging solutions.</p>
@@ -280,14 +279,12 @@
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-flag"></i></div>
               <h4 class="title">Our Mission </h4>
               <p class="description">We offer technology-based solutions and quality to meet customer needs at competitive prices.</p>
             </div>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12" data-aos="fade-up" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-stars"></i></div>
               <h4 class="title">Our Values</h4>
               <p class="description">Passion, Respect, Innovation, Professionalism, Teamwork.</p>
             </div>
@@ -352,10 +349,10 @@
                             <img class="img-fluid" style="height: 187px;" src="../assets/img/produtos1/sumos.png" >
                             </div>
                             <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-                              <img class="img-fluid" style="height: 187px;" src="../assets/img/produtos1/timbrado.jpg" >
+                              <img class="img-fluid" style="height: 187px;" src="../assets/img/produtos1/timbradonovo.png" >
                               </div>
                               <div class="col-md-4 col-sm-6 col-xs-12 mb-5 text-center " data-aos="fade-up">
-                                <img class="img-fluid" style="height: 187px;" src="../assets/img/produtos1/grades.jpg" >
+                                <img class="img-fluid" style="height: 187px;" src="../assets/img/produtos1/gradesnovo.png" >
                                 </div>
       </div>
 
@@ -418,6 +415,7 @@
             <div class="swiper-slide"><img src="../assets/img/clients/ghion.jpeg" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="../assets/img/clients/pepsi.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="../assets/img/clients/refriango.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/sivan.png" class="img-fluid" alt=""></div>
 
           </div>
           <div class="swiper-pagination"></div>
@@ -1174,53 +1172,53 @@ function closeOverlay() {
   </script>
 
 <script src="https://cdn.jsdelivr.net/npm/ol@v10.2.1/dist/ol.js"></script>
-    <script>
-        // Create the map
-        const map = new ol.Map({
-            target: 'map',
-            layers: [
-                // Add OpenStreetMap layer
-                new ol.layer.Tile({
-                    source: new ol.source.OSM()
-                })
-            ],
-            view: new ol.View({
-                center: ol.proj.fromLonLat([13.407329755796189, -8.926372705316547]),
-                zoom: 15
-            })
-        });
+<script>
+  // Create the map
+  const map = new ol.Map({
+      target: 'map',
+      layers: [
+          // Add OpenStreetMap layer
+          new ol.layer.Tile({
+              source: new ol.source.OSM()
+          })
+      ],
+      view: new ol.View({
+          center: ol.proj.fromLonLat([13.407426131978601, -8.943798021001733]),
+          zoom: 15
+      })
+  });
+ 
+  // Add a marker at the specified location
+  const marker = new ol.Feature({
+      geometry: new ol.geom.Point(
+          ol.proj.fromLonLat([13.407426131978601, -8.943798021001733])
+      )
+  });
 
-        // Add a marker at the specified location
-        const marker = new ol.Feature({
-            geometry: new ol.geom.Point(
-                ol.proj.fromLonLat([13.407329755796189, -8.926372705316547])
-            )
-        });
+  // Style for the marker
+  const markerStyle = new ol.style.Style({
+      image: new ol.style.Circle({
+          radius: 8,
+          fill: new ol.style.Fill({ color: '#ff0000' }),
+          stroke: new ol.style.Stroke({
+              color: '#ffffff',
+              width: 2
+          })
+      })
+  });
 
-        // Style for the marker
-        const markerStyle = new ol.style.Style({
-            image: new ol.style.Circle({
-                radius: 8,
-                fill: new ol.style.Fill({ color: '#ff0000' }),
-                stroke: new ol.style.Stroke({
-                    color: '#ffffff',
-                    width: 2
-                })
-            })
-        });
+  marker.setStyle(markerStyle);
 
-        marker.setStyle(markerStyle);
+  // Create a vector layer for the marker
+  const vectorLayer = new ol.layer.Vector({
+      source: new ol.source.Vector({
+          features: [marker]
+      })
+  });
 
-        // Create a vector layer for the marker
-        const vectorLayer = new ol.layer.Vector({
-            source: new ol.source.Vector({
-                features: [marker]
-            })
-        });
-
-        // Add the vector layer to the map
-        map.addLayer(vectorLayer);
-    </script>
+  // Add the vector layer to the map
+  map.addLayer(vectorLayer);
+</script>
 
 </body>
 
