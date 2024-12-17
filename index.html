@@ -85,6 +85,31 @@
             width: 100%;
             height: 100%;
         }
+
+
+
+
+
+/* Responsive hide/show class */
+@media (max-width: 768px) {
+    /* On mobile: hide the element */
+    .hide-mobile {
+        display: none;
+    }
+    li a {
+        color: black;
+    }
+}
+
+@media (min-width: 769px) {
+    /* On desktop: show the element */
+    .hide-mobile {
+        display: block;
+    }
+    nav ul li a.text {
+        color: white;
+    }
+}
 </style>
 
 
@@ -92,36 +117,36 @@
 <body>
 
   <!-- ======= Top Bar  ======= -->
-  <section id="topbar" class="d-flex align-items-center">
-    <div class="container d-flex justify-content-center justify-content-md-between">
+   <div class="hide-mobile">
+  <section id="topbar" class=" d-flex align-items-center " style="background-color: white;height: 120px;">
+    <div class="container d-flex justify-content-center ">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:vendasplastek@flotekafrica.com">vendasplastek@flotekafrica.com</a></i>
-        <i class="bi bi-phone d-flex align-items-center ms-4"><span>922 738 302 / 947 941 599</span></i>
+        <img src="assets/img/logofundo.png" style="height: 60px;" alt="Logo">
       </div>
 
     </div>
-  </section>
+  </section></div>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center" >
+  <header id="header" class="d-flex align-items-center" style="background-color: #0253a4;" >
     <div class="container d-flex align-items-center justify-content-between" >
 
       <div >
- <a href="index.html"><img src="assets/img/logofundo.png" style="height: 60px" alt="" ></a> 
+ <a href="index.html"><img src="assets/img/logoallwhite.png" style="height: 60px" alt="" ></a> 
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto">Quem somos</a></li>
-          <li><a href="#services"><span>Objectivos</span></a></li>
-          <li><a href="#servico">Serviços</a></li>
-          <li><a href="#Notícias">Notícias</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
+          <li><a class="nav-link scrollto text" >Quem somos</a></li>
+          <li><a href="#services" class="text" ><span>Objectivos</span></a></li>
+          <li><a href="#servico" class="text" >Serviços</a></li>
+          <li><a href="#Notícias"  class="text">Notícias</a></li>
+          <li><a class="nav-link scrollto text" href="#contact" >Contacto</a></li>
           <li class="dropdown">
             <a href="#"><span>🌐</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="index.html" data-lang="pt">Português</a></li>
-              <li><a href="en/index.html" data-lang="en">English</a></li>
+              <li><a href="index.html" data-lang="pt" >Português</a></li>
+              <li><a href="en/index.html" data-lang="en" >English</a></li>
             </ul>
           </li>
         </ul>
@@ -130,7 +155,7 @@
           <i style="font-size: 50px; color: #05aa0d;" class="bx bxl-whatsapp"></i>
         </a>
       
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-list mobile-nav-toggle"  style="color: white;"></i>
       </nav>
 
     </div>
@@ -554,28 +579,26 @@
 
         <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
           <div class="col-xl-9 col-lg-12 mt-4">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="#" id="contactForm" class="php-email-form">
               <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
-                </div>
+                  <div class="col-md-12 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
+                  </div>
+                
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
+                  <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message" id="sentMessage">Sua mensagem foi enviada. Obrigado!</div>
               </div>
-              <div class="text-center"><button type="submit" >Enviar Mensagem</button></div>
-            </form>
+              <div class="text-center">
+                  <button type="submit">Enviar Mensagem</button>
+              </div>
+          </form>
           </div>
         </div>
 
@@ -1220,6 +1243,45 @@ function closeOverlay() {
         // Add the vector layer to the map
         map.addLayer(vectorLayer);
     </script>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Reset messages
+      document.getElementById('sentMessage').style.display = 'none';
+      
+      // Show loading
+      
+      try {
+          // Get form values
+          const name = document.getElementById('name').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.querySelector('textarea[name="message"]').value;
+          
+          // Construct WhatsApp message
+          const phoneNumber = '244947941599';
+          const whatsappMessage = `Nome: ${name}\nAssunto: ${subject}\n\nMensagem:\n${message}`;
+          
+          // Encode the message for URL
+          const encodedMessage = encodeURIComponent(whatsappMessage);
+          
+          // Construct WhatsApp URL
+          const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+          
+          // Open WhatsApp in a new window
+          window.open(whatsappUrl, '_blank');
+          
+          // Hide loading, show sent message
+          document.getElementById('sentMessage').style.display = 'block';
+          
+          // Reset form
+          this.reset();
+      } catch (error) {
+          // Show error message
+      }
+  });
+</script>
 
 </body>
 
